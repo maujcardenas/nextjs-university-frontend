@@ -5,7 +5,7 @@ import "./defaultLayout.css";
 
 const DefaultLayout = ({ children }) => {
   return (
-    <div className="main bg-mainbgc text-mainco">
+    <div className="main bg-mainbgc text-mainco h-screen flex flex-col justify-between">
       <Navbar />
 
       <div className="container flex">

@@ -1,11 +1,11 @@
 export const menuData = [
   {
     id: 1,
-    title: "main",
+    title: "Main",
     listItems: [
       {
         id: 1,
-        title: "Homepage",
+        title: "Home",
         url: "/",
         icon: "home.svg",
       },
@@ -19,55 +19,25 @@ export const menuData = [
   },
   {
     id: 2,
-    title: "lists",
+    title: "University Dashboard",
     listItems: [
       {
         id: 1,
-        title: "Users",
-        url: "/users",
+        title: "Current Courses",
+        url: "/current-courses",
         icon: "user.svg",
       },
       {
         id: 2,
-        title: "Products",
-        url: "/products",
+        title: "Registration",
+        url: "/registration",
         icon: "product.svg",
       },
       {
         id: 3,
-        title: "Orders",
-        url: "/orders",
+        title: "Schedule",
+        url: "/schedule",
         icon: "order.svg",
-      },
-      {
-        id: 4,
-        title: "Posts",
-        url: "/posts",
-        icon: "post2.svg",
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: "general",
-    listItems: [
-      {
-        id: 1,
-        title: "Elements",
-        url: "/",
-        icon: "element.svg",
-      },
-      {
-        id: 2,
-        title: "Notes",
-        url: "/",
-        icon: "note.svg",
-      },
-      {
-        id: 3,
-        title: "Forms",
-        url: "/",
-        icon: "form.svg",
       },
       {
         id: 4,
@@ -78,38 +48,44 @@ export const menuData = [
     ],
   },
   {
-    id: 4,
-    title: "Maintenance",
+    id: 3,
+    title: "History",
     listItems: [
       {
         id: 1,
-        title: "Settings",
+        title: "Study Sessions",
+        url: "/",
+        icon: "element.svg",
+      },
+      {
+        id: 2,
+        title: "Academic Kardex",
+        url: "/",
+        icon: "note.svg",
+      },
+      {
+        id: 3,
+        title: "Achievements",
+        url: "/",
+        icon: "form.svg",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "University Planning",
+    listItems: [
+      {
+        id: 1,
+        title: "Segments",
         url: "/",
         icon: "setting.svg",
       },
       {
         id: 2,
-        title: "Backups",
+        title: "Add/Edit Courses",
         url: "/",
         icon: "backup.svg",
-      },
-    ],
-  },
-  {
-    id: 5,
-    title: "analytics",
-    listItems: [
-      {
-        id: 1,
-        title: "Charts",
-        url: "/",
-        icon: "chart.svg",
-      },
-      {
-        id: 2,
-        title: "Logs",
-        url: "/",
-        icon: "log.svg",
       },
     ],
   },
