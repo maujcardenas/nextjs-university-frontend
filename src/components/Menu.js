@@ -1,15 +1,3 @@
-// export const menu = [
-//   {
-//     id: 1,
-//     title: "main",
-//     listItems: [
-//       {
-//         id: 1,
-//         title: "Homepage",
-//         url: "/",
-//         icon: "home.svg",
-//       },
-
 import { menuData } from "./menuData";
 import Link from "next/link";
 

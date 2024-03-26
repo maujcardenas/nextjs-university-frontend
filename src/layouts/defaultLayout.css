@@ -12,6 +12,6 @@
 
 @layer utilities {
   .grid-auto-rows-minmax {
-    grid-auto-rows: minmax(180px, auto);
+    grid-auto-rows: minmax(auto, auto);
   }
 }

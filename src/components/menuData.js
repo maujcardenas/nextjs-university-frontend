@@ -84,7 +84,7 @@ export const menuData = [
       {
         id: 2,
         title: "Add/Edit Courses",
-        url: "/",
+        url: "/courses",
         icon: "backup.svg",
       },
     ],
