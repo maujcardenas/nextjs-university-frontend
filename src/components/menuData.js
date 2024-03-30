@@ -11,8 +11,8 @@ export const menuData = [
       },
       {
         id: 2,
-        title: "Profile",
-        url: "/users/1",
+        title: "About",
+        url: "/about",
         icon: "user.svg",
       },
     ],
@@ -83,7 +83,7 @@ export const menuData = [
       },
       {
         id: 2,
-        title: "Add/Edit Courses",
+        title: "Course Catalog",
         url: "/courses",
         icon: "backup.svg",
       },

@@ -5,10 +5,8 @@ function AboutPage() {
   return (
     <div>
       <DefaultLayout>
-        <h1>About Us</h1>
-        <p className="">
-          This is a personal university app, where you can study what you want!.
-        </p>
+        <h1>About</h1>
+        <p>This is the about page</p>
       </DefaultLayout>
     </div>
   );

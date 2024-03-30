@@ -1,6 +1,6 @@
 import DefaultLayout from "../layouts/defaultLayout";
 import "./tailwind.css";
-import { fetchSubjects } from "./fetchData";
+import { fetchSubjects } from "../app/data/fetchData";
 
 import { useEffect, useState } from "react";
 
@@ -20,28 +20,39 @@ function CoursesPage() {
 
   return (
     <DefaultLayout>
-      <div className="coursespage grid grid-cols-4 gap-2 grid-auto-rows-minmax">
-        {subjects.map((item) => (
-          <div
-            key={item.id}
-            className="block1 py-3 px-2 rounded-md bg-softbgc col-span-2 text-sm grid grid-cols-3 gap-5"
-          >
-            <div className="col-span-1">
-              <h2 className="text-sm uppercase text-green-200">
-                {item.attributes.Department}
-              </h2>
-            </div>
-            <div className="col-span-2 flex flex-col justify-start">
-              <h2 className="text-lg font-bold uppercase">
-                {item.attributes.subjectTitle}
-              </h2>
-              {/* <span className="font-bold inline-block">Description:</span> */}
-              <p className="inline-block">
-                {item.attributes.subjectDescription}
-              </p>
-            </div>
-          </div>
-        ))}
+      <div className="coursespage ">
+        <div className="overflow-x-auto">
+          <table className="table ">
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Department</th>
+                <th className="min-w-72">Course</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              {subjects.map((item) => (
+                <tr key={item.id}>
+                  <td>{item.id}</td>
+                  <td className="uppercase text-green-500">
+                    {item.attributes.Department}
+                  </td>
+                  <th>{item.attributes.subjectTitle}</th>
+                  <td>{item.attributes.subjectDescription}</td>
+                </tr>
+              ))}
+            </tbody>
+            <tfoot>
+              <tr>
+                <th>ID</th>
+                <th>Department</th>
+                <th>Course</th>
+                <th>Description</th>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
       </div>
     </DefaultLayout>
   );
