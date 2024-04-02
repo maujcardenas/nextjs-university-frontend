@@ -2,7 +2,7 @@ const Navbar = () => {
   return (
     <div className="navbar flex w-full p-5 justify-between">
       <div className="logo flex items-center gap-2.5">
-        <img src="./logo.svg" alt="logo" />
+        <img className="w-12" src="./LogoSolo.png" alt="logo" />
         <span>Personal University</span>
       </div>
       <div className="icons flex items-center gap-4">

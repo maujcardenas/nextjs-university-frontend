@@ -17,9 +17,42 @@ const CurrentCourses = () => {
     getCurrentSubjects();
   }, []);
 
+  const calculateProgressWithCurrentCourses = (currentSubjects) => {
+    let sumStudiedHours = 0;
+    let sumRequiredHours = 0;
+    currentSubjects.forEach((item) => {
+      sumStudiedHours = sumStudiedHours + item.attributes.currentCourseHours;
+      sumRequiredHours =
+        sumRequiredHours +
+        item.attributes.subject.data.attributes.hoursForCompletion;
+    });
+    const totalP = sumStudiedHours / sumRequiredHours;
+    return totalP;
+  };
+
   return (
     <div>
-      <h1>Current Courses</h1>
+      <div className="flex gap-4 items-end">
+        <div>
+          <h3 className="uppercase text-sm">Completion Progress</h3>
+          <progress
+            className="progress progress-warning w-96"
+            value={calculateProgressWithCurrentCourses(currentSubjects)}
+            max={1}
+          ></progress>
+        </div>
+        <div>
+          <p className="text-sm w-96">
+            Your current progress with the courses registered is{" "}
+            <span className="text-green-500">
+              {" "}
+              {calculateProgressWithCurrentCourses(currentSubjects).toFixed(
+                4
+              )}{" "}
+            </span>
+          </p>
+        </div>
+      </div>
 
       <table className="table ">
         <thead>
@@ -29,6 +62,7 @@ const CurrentCourses = () => {
             <th>Department</th>
             <th>Hours Completed</th>
             <th>Hours for Completion</th>
+            <th>Progress</th>
             <th>Is Completed?</th>
             <th>Grade</th>
           </tr>
@@ -52,6 +86,15 @@ const CurrentCourses = () => {
               <td>{item.attributes.currentCourseHours}</td>
               <td>
                 {item.attributes.subject.data.attributes.hoursForCompletion}
+              </td>
+              <td>
+                <progress
+                  className="progress progress-accent w-24"
+                  value={item.attributes.currentCourseHours}
+                  max={
+                    item.attributes.subject.data.attributes.hoursForCompletion
+                  }
+                ></progress>
               </td>
               <td>{item.attributes.isCompleted ? "Yes" : "No"}</td>
               <td>{item.attributes.Grade}</td>
